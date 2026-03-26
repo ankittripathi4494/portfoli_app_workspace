@@ -1,0 +1,32 @@
+package_rename_config:
+  android:
+    app_name: "Tech Portfolio" # Display name
+    package_name: "com.thetechadhikari.portfolio" # Package name
+    override_old_package: "com.thetechadhikari.portfolioapp" # Optional: Cleans up old folder structure
+    lang: "kotlin" # Optional: "kotlin" (default) or "java"
+
+  ios:
+    app_name: "Tech Portfolio" # Display name
+    bundle_name: "Tech Portfolio" # Bundle name
+    package_name: "com.thetechadhikari.portfolio" # Product Bundle Identifier
+
+  linux:
+    app_name: "Tech Portfolio" # Window title
+    package_name: "com.thetechadhikari.portfolio" # Application ID
+    exe_name: "my_app" # Executable name (binary)
+
+  macos:
+    app_name: "Tech Portfolio" # Product name
+    package_name: "com.thetechadhikari.portfolio" # Product Bundle Identifier
+    copyright_notice: "Copyright © 2026" # Copyright notice
+
+  web:
+    app_name: "Tech Portfolio" # App title & PWA name
+    short_app_name: "App" # PWA short name (defaults to app_name)
+    description: "Best App" # Web app description
+
+  windows:
+    app_name: "Tech Portfolio" # Window title & Software name
+    organization: "My Org" # Organization/Company name
+    copyright_notice: "Copyright © 2026" # Legal copyright
+    exe_name: "my_app" # Executable name (binary)
