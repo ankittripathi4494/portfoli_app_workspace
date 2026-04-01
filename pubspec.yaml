@@ -34,6 +34,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  connectivity_plus: ^7.0.0 # to check Network connectivity in flutter app
+  get: ^4.7.3
 
 dev_dependencies:
   flutter_test:
@@ -47,7 +49,7 @@ dev_dependencies:
   flutter_lints: ^6.0.0
   flutter_launcher_icons: ^0.14.4
   flutter_native_splash: ^2.4.7
-  package_rename: ^1.10.1
+  package_rename: ^1.10.1 # generators or code builder
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

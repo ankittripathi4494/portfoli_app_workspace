@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:portfoli_app_workspace/global/global.export.dart';
 import 'package:portfoli_app_workspace/my_home_page.dart';
 
@@ -29,10 +30,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: _getTitleForFlavour,
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
       home: MyHomePage(title: '$_getTitleForFlavour Home Page'),
+      routes: {
+        '/screen1': (context){
+          final args = ModalRoute.of(context)?.settings.arguments as Map?;
+          return Screen1(message: args);
+        },
+      },
     );
   }
 }
