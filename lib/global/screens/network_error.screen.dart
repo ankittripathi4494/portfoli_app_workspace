@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart'
-    show Center, Column, StatelessWidget, Widget, Scaffold, BuildContext;
-import 'package:portfoli_app_workspace/global/utils/resource.helper.dart';
-import 'package:portfoli_app_workspace/global/widgets/export.dart'
-    show AssetImageWidget, TextWidget;
+import 'package:flutter/material.dart';
+import 'package:portfoli_app_workspace/global.dart'
+    show AssetImageWidget, TextWidget, ResourceHelper;
 
 class NetworkErrorScreen extends StatelessWidget {
   const NetworkErrorScreen({super.key});

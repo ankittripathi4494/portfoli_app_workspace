@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'global/global.export.dart';
+import 'global.dart';
 part 'my_app.dart';
 
 void main() {

@@ -1,8 +1,7 @@
-/*
-This file serves as a central export point for all route-related files in the global directory.
-By exporting all route files here, we can simplify imports throughout the application, 
-allowing developers to import from this single file instead of multiple individual files. 
-This promotes cleaner and more maintainable code.
+/// Route Configuration
+library;
 
-*/
-export 'app.routes.dart';
+export 'app.routes.dart' show router;
+
+/// Route Constants
+export 'constants.routes.dart' show ConstantsRoutes;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart'
     show BuildContext, Scaffold, StatelessWidget, Widget, Center;
-import 'package:portfoli_app_workspace/global/global.export.dart'
+import 'package:portfoli_app_workspace/global.dart'
     show TextWidget;
 
 class HomeScreen extends StatelessWidget {
