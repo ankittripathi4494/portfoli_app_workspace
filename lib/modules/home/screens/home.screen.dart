@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart'
-    show BuildContext, Scaffold, StatelessWidget, Widget, Center;
-import 'package:portfoli_app_workspace/global.dart'
-    show TextWidget;
+import 'package:flutter/material.dart';
+import 'package:portfoli_app_workspace/global.dart' show TextWidget;
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

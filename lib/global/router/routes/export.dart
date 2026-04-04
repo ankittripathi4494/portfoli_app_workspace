@@ -1,5 +1,5 @@
 /// Route Configuration
-library;
+library routes;
 
 export 'app.routes.dart' show router;
 

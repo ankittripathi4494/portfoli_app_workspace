@@ -5,9 +5,11 @@ To implement routing, you would typically define static constants for route name
 or handle navigation logic. This class can be expanded in the future to include such functionality as needed.
 */
 import 'package:go_router/go_router.dart';
-import 'package:portfoli_app_workspace/global/router/routes/constants.routes.dart';
-import 'package:portfoli_app_workspace/global/screens/network_error.screen.dart';
-import 'package:portfoli_app_workspace/modules/home/screens/home.screen.dart';
+import 'package:portfoli_app_workspace/global.dart'
+    show ConstantsRoutes, NetworkErrorScreen;
+import 'package:portfoli_app_workspace/modules/home/export.dart' show HomeScreen;
+// import 'package:portfoli_app_workspace/modules/authentication/export.dart' show LoginScreen;
+// import 'package:portfoli_app_workspace/modules/checkout/export.dart' show CheckoutScreen;
 
 // GoRouter configuration
 final router = GoRouter(

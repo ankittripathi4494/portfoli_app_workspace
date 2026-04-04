@@ -10,6 +10,9 @@ export 'global/utils/resource.helper.dart' show ResourceHelper;
 export 'global/widgets/text.widget.dart' show TextWidget;
 export 'global/widgets/asset_image.widget.dart' show AssetImageWidget;
 
+/// Global Screens
+export 'global/screens/network_error.screen.dart' show NetworkErrorScreen;
+
 /// Routing
 export 'global/router/routes/app.routes.dart' show router;
 export 'global/router/routes/constants.routes.dart' show ConstantsRoutes;

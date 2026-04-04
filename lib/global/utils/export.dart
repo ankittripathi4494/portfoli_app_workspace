@@ -1,5 +1,5 @@
 /// Extension Methods
-library;
+library utils;
 export 'helpers.extensions.dart' show StringEnhancer, DateTimeEnhancer;
 
 /// Helper Classes
