@@ -3,16 +3,13 @@
 library;
 
 /// Utilities & Helpers
-export 'global/utils/helpers.extensions.dart' show StringEnhancer, DateTimeEnhancer;
-export 'global/utils/resource.helper.dart' show ResourceHelper;
+export 'global/utils/export.dart';
 
 /// Widgets
-export 'global/widgets/text.widget.dart' show TextWidget;
-export 'global/widgets/asset_image.widget.dart' show AssetImageWidget;
+export 'global/widgets/export.dart';
 
 /// Global Screens
-export 'global/screens/network_error.screen.dart' show NetworkErrorScreen;
+export 'global/screens/export.dart';
 
 /// Routing
-export 'global/router/routes/app.routes.dart' show router;
-export 'global/router/routes/constants.routes.dart' show ConstantsRoutes;
+export 'global/router/export.dart';

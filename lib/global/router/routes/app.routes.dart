@@ -7,13 +7,14 @@ or handle navigation logic. This class can be expanded in the future to include 
 import 'package:go_router/go_router.dart';
 import 'package:portfoli_app_workspace/global.dart'
     show ConstantsRoutes, NetworkErrorScreen;
-import 'package:portfoli_app_workspace/modules/home/export.dart' show HomeScreen;
+import 'package:portfoli_app_workspace/modules/home/export.dart'
+    show HomeScreen;
 // import 'package:portfoli_app_workspace/modules/authentication/export.dart' show LoginScreen;
 // import 'package:portfoli_app_workspace/modules/checkout/export.dart' show CheckoutScreen;
 
 // GoRouter configuration
 final router = GoRouter(
-  initialLocation: ConstantsRoutes.home,
+  initialLocation: ConstantsRoutes.home.path,
 
   redirect: (context, state) {
     // Example redirect logic (can be customized based on authentication status, etc.)
@@ -25,11 +26,13 @@ final router = GoRouter(
   },
   routes: [
     GoRoute(
-      path: ConstantsRoutes.home,
+      name: ConstantsRoutes.home.name,
+      path: ConstantsRoutes.home.path,
       builder: (context, state) => HomeScreen(),
     ),
     GoRoute(
-      path: ConstantsRoutes.networkError,
+      name: ConstantsRoutes.networkError.name,
+      path: ConstantsRoutes.networkError.path,
       builder: (context, state) => NetworkErrorScreen(),
     ),
   ],
