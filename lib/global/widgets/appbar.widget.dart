@@ -18,7 +18,6 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     /// Here is a basic implementation of an AppBar. You can modify it to include more features as needed.
     ///
     return AppBar(
-      backgroundColor: Theme.of(context).colorScheme.primary,
       leading: leadingIcon != null ? Icon(leadingIcon) : null,
       title: title != null ? Text(title!) : null,
       actions: actions,

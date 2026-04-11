@@ -20,6 +20,15 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(child: TextWidget('Home Screen')));
+      body: const Center(child: TextWidget('Home Screen')), floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Handle FAB action
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('FAB Pressed!')),
+          );
+        },
+        child: const Icon(Icons.add),
+      ));
+      
   }
 }

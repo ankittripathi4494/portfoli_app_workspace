@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   connectivity_plus: ^7.0.0 # to check Network connectivity in flutter app
   go_router: ^17.2.0
+  flex_color_scheme: ^8.4.0
 
 dev_dependencies:
   flutter_test:

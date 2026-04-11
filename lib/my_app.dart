@@ -28,8 +28,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: _getTitleForFlavour,
-      theme: GalleryTheme.lightTheme,
-      darkTheme: GalleryTheme.darkTheme,
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
+      
+      themeMode: ThemeMode.system,
       routerConfig: router,
     );
   }
