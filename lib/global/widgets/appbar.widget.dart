@@ -1,26 +1,52 @@
 import 'package:flutter/material.dart';
 
-class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
-  final IconData? leadingIcon;
-  final String? title;
-  final List<Widget>? actions;
-  const AppBarWidget({super.key, this.leadingIcon, this.title, this.actions});
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-
+class CustomAppBarWidget extends StatelessWidget
+    implements PreferredSizeWidget {
+  final Widget? leading;
+  final double appBarHeight;
+  final bool enableBackgroundImage;
+  final dynamic title;
+  const CustomAppBarWidget({
+    super.key,
+    this.leading,
+    this.appBarHeight = kToolbarHeight,
+    this.enableBackgroundImage = false,
+    this.title,
+  });
 
   @override
   Widget build(BuildContext context) {
-    /// AppBar Component, you can customize it as per your requirements.
-    /// For example, you can add title, actions, background color, etc.
-    /// Design and functionality of the AppBar can be enhanced based on your application's needs.
-    /// Here is a basic implementation of an AppBar. You can modify it to include more features as needed.
-    ///
+    // AppBar with optional background image and leading widget
+    // AppBar comes with flutter by default, so we can use it directly and customize as needed
     return AppBar(
-      leading: leadingIcon != null ? Icon(leadingIcon) : null,
-      title: title != null ? Text(title!) : null,
-      actions: actions,
+      leading: leading,
+      flexibleSpace: enableBackgroundImage
+          ? Container(
+              decoration: BoxDecoration(
+                color: Colors.black.withValues(alpha: 0.5),
+                image: DecorationImage(
+                  image: AssetImage("assets/images/splash.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            )
+          : null,
+      title: _getTitleWidget(),
     );
+  }
+
+  @override
+  Size get preferredSize => Size.fromHeight(appBarHeight);
+
+  Widget? _getTitleWidget() {
+    if (title == null) {
+      return null;
+    } else if (title is String) {
+      return Text(title);
+    } else if (title is Widget) {
+      return title;
+    } else {
+      throw ArgumentError('Title must be either a String or a Widget');
+    }
   }
 }
