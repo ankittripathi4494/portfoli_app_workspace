@@ -5,13 +5,17 @@ class CustomAppBarWidget extends StatelessWidget
   final Widget? leading;
   final double appBarHeight;
   final bool enableBackgroundImage;
+  final bool automaticallyImplyLeading;
   final dynamic title;
+  final List<Widget>? actions;
   const CustomAppBarWidget({
     super.key,
     this.leading,
     this.appBarHeight = kToolbarHeight,
+    this.automaticallyImplyLeading = true,
     this.enableBackgroundImage = false,
     this.title,
+    this.actions,
   });
 
   @override
@@ -20,18 +24,21 @@ class CustomAppBarWidget extends StatelessWidget
     // AppBar comes with flutter by default, so we can use it directly and customize as needed
     return AppBar(
       leading: leading,
+      surfaceTintColor: Colors.transparent,
+      automaticallyImplyLeading: automaticallyImplyLeading,
       flexibleSpace: enableBackgroundImage
           ? Container(
               decoration: BoxDecoration(
                 color: Colors.black.withValues(alpha: 0.5),
                 image: DecorationImage(
-                  image: AssetImage("assets/images/splash.jpg"),
+                  image: AssetImage("assets/images/bg2.webp"),
                   fit: BoxFit.cover,
                 ),
               ),
             )
           : null,
       title: _getTitleWidget(),
+      actions: actions,
     );
   }
 
