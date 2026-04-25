@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfoli_app_workspace/gen/assets.gen.dart';
 import 'package:portfoli_app_workspace/global.dart'
     show CustomAppBarWidget, ButtonsWidget, TextWidget;
 import 'package:portfoli_app_workspace/global/widgets/buttons.widget.dart';
@@ -11,7 +12,15 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBarWidget(
         leading: Icon(Icons.hive_outlined),
-        enableBackgroundImage: true,
+        customiseAppBar: true,
+        enableBackgroundImage: false,
+        enableGradient: true,
+        customGradient: LinearGradient(
+          colors: [Colors.red, Colors.black],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        customImage: Assets.images.bg1.provider(),
         title: TextWidget(
           "Home Screen",
           textAlign: TextAlign.center,
@@ -61,6 +70,7 @@ class HomeScreen extends StatelessWidget {
                 appBar: CustomAppBarWidget(
                   // automaticallyImplyLeading: false,
                   enableBackgroundImage: false,
+                  enableGradient: false,
                   title: TextWidget(
                     "New Screen",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),

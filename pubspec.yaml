@@ -54,6 +54,7 @@ dev_dependencies:
   package_rename: ^1.10.1 # generators or code builder
   go_router_builder: ^4.2.1
   build_runner: ^2.13.1
+  flutter_gen_runner: ^5.14.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
